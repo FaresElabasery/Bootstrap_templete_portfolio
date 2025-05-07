@@ -14,12 +14,15 @@
     <title>Kerri</title>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- scroll up icon -->
+    <a href="#home" class="fixed-icon ">
+        <i class="fa-solid fa-angle-up"></i></a>
     <!-- fixed icon -->
-    <a href="#home" class="fixed-icon position-fixed z-1 bg-black top-50  text-white py-2 px-3 rounded-end-3">
+    <a href="#home" class="position-fixed z-1 bg-black top-50  text-white py-2 px-3 rounded-end-3">
         <i class="fa-solid fa-gear fa-spin"></i></a>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">Kerri</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -45,7 +48,7 @@
                         <a class="nav-link" href="#blog">blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Contact">contact</a>
+                        <a class="nav-link" href="#contact">contact</a>
                     </li>
             </div>
         </div>
@@ -531,7 +534,68 @@
                 </div>
             </div>
         </section>
+        <section id="contact" class="contact">
+            <div class="heading mb-2 text-center max-width-600 m-auto">
+                <h2 class="mb-3"><span>contact</span> us</h2>
+                <p class="text-secondary">It is a long established fact that a reader will be of a page when established
+                    fact looking at its
+                    layout.
+                </p>
+            </div>
+            <div class="container">
+                <form method="get">
+                    <div class="row gy-3 ">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control " placeholder="Name" required aria-label="Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control " placeholder="E-mail" required aria-label="E-mail">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control " placeholder="Subject" required
+                                aria-label="subject">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea name="message" id="message" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn-form mt-3" type="submit">Send Message</button>
+                </form>
+            </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <div class="container">
+            <ul class="list-unstyled d-flex justify-content-center align-items-center column-gap-3">
+                <a class="link-secondary text-decoration-none" href="https://www.facebook.com/fares.elabasery.9"
+                    target="_blank" rel="noopener noreferrer">
+                    <li class="d-flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-facebook fa-fw"></i>
+                    </li>
+                </a>
+                <a class="link-secondary text-decoration-none" href="https://www.facebook.com/fares.elabasery.9"
+                    target="_blank" rel="noopener noreferrer">
+                    <li class="d-flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-linkedin fa-fw"></i>
+                    </li>
+                </a>
+                <a class="link-secondary text-decoration-none" href="https://www.facebook.com/fares.elabasery.9"
+                    target="_blank" rel="noopener noreferrer">
+                    <li class="d-flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-pinterest fa-fw"></i>
+                    </li>
+                </a>
+                <a class="link-secondary text-decoration-none" href="https://www.facebook.com/fares.elabasery.9"
+                    target="_blank" rel="noopener noreferrer">
+                    <li class="d-flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-twitter fa-fw"></i>
+                    </li>
+                </a>
+            </ul>
+            <p class="text-secondary text-center">2018 - 2021 © Kerri. Design by SRBThemes.</p>
+        </div>
+    </footer>
 
 
 
@@ -541,7 +605,8 @@
         var typed = new Typed('#element', {
             strings: ['web devolper', 'designer', 'Web developer'],
             typeSpeed: 50,
-            loop: true
+            loop: true,
+            smartBackspace: true,
         });
     </script>
     <!-- bootstrap js -->

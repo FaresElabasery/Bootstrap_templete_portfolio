@@ -10,15 +10,44 @@
     max-width: 600px;
 }
 
+html {
+    scroll-padding: 80px;
+}
+
 section {
     padding-block: 50px;
     margin-block: 80px;
+}
+
+.heading h2 span {
+    font-weight: bold;
 }
 
 .bg-color {
     background-color: #f3f3f3;
 }
 
+.fixed-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-color);
+    color: white;
+    width: 30px;
+    text-decoration: none;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.fixed-icon:hover {
+    background-color: white;
+    color: var(--main-color);
+    transform: scale(1.1);
+}
 
 /* start navbar */
 .navbar ul li a {
@@ -36,6 +65,17 @@ section {
     position: absolute;
     content: "";
     width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    top: 90%;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a.active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
     height: 3px;
     background-color: var(--main-color);
     top: 90%;
@@ -217,9 +257,59 @@ h2::after {
     transform: rotateY(0) scale(1);
     opacity: 1;
 }
+
 .blog .img-container img {
     transition: all 0.5s ease-in-out;
 }
+
 .blog .img-container:hover img {
     transform: scale(1.1);
+}
+
+/* contact section */
+.form-control:focus {
+    border-color: var(--main-color);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgb(230, 95, 120, 0.25);
+}
+
+#contact .container .btn-form {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    display: block;
+    border-radius: 3px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin-left: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact .btn-form:hover {
+    background-color: rgb(230, 95, 120, 0.8);
+    ;
+}
+
+/* footer  section */
+footer {
+    background-color: #212121;
+    padding-block: 80px;
+}
+
+footer li {
+    background-color: #313131;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+footer i {
+    transition: all 0.3s ease-in-out;
+}
+
+footer li:hover i {
+    color: var(--main-color);
 }
