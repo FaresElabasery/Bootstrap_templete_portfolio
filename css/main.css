@@ -1,0 +1,189 @@
+:root {
+    --main-color: #E65F78;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.max-width-600 {
+    max-width: 600px;
+}
+
+section {
+    padding-block: 50px;
+    margin-block: 80px;
+}
+
+.bg-color {
+    background-color: #f3f3f3;
+}
+
+
+/* start navbar */
+.navbar ul li a {
+    position: relative;
+    margin-right: 12px;
+    width: fit-content;
+    text-transform: capitalize;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar ul li a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    top: 90%;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* header section */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/header-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.scroll {
+    width: 25px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 10px;
+}
+
+.scroll::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: move 1s infinite ease-in;
+}
+
+@keyframes move {
+    0% {
+        top: 10px;
+    }
+
+    100% {
+        top: 50%;
+        opacity: 0;
+    }
+}
+
+/* about section */
+.progress,
+.progress-stacked {
+    height: 22px;
+    border-radius: 0px
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    padding: 0px 16px;
+    ;
+}
+
+.about ul li {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border: 1px solid #0f0f0f;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+.about ul li:hover {
+    border: 1px solid var(--main-color);
+}
+
+.about ul li i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-out;
+    color: #0f0f0f;
+}
+
+.about ul li:hover i {
+    color: var(--main-color);
+}
+
+/* Clients section */
+h2 {
+    position: relative;
+}
+
+h2::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+}
+
+/* clients section */
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--main-color);
+
+}
+
+/* portfolio  section */
+.portfolio .overlay {
+    inset: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio .img-container:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+.portfolio .overlay-content {
+    transform: translateY(300%);
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio .img-container:hover .overlay-content {
+    transform: translateY(0);
+
+}
+.portfolio .nav.nav-pills{
+    display: flex;
+    justify-content: center;
+}
+.portfolio .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white;
+    background-color: var(--main-color);
+}
+.portfolio .nav-pills .nav-link {
+    color: #0f0f0f;
+}
