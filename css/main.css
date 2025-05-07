@@ -176,14 +176,50 @@ h2::after {
     transform: translateY(0);
 
 }
-.portfolio .nav.nav-pills{
+
+.portfolio .nav.nav-pills {
     display: flex;
     justify-content: center;
 }
-.portfolio .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+
+.portfolio .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     color: white;
     background-color: var(--main-color);
 }
+
 .portfolio .nav-pills .nav-link {
     color: #0f0f0f;
+}
+
+
+/* Blog section */
+.blog .custom-card {
+    background-color: white;
+}
+
+.blog .img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog .img-container .overlay {
+    position: absolute;
+    inset: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: rotateY(180deg) scale(0);
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+}
+
+.blog .img-container:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: rotateY(0) scale(1);
+    opacity: 1;
+}
+.blog .img-container img {
+    transition: all 0.5s ease-in-out;
+}
+.blog .img-container:hover img {
+    transform: scale(1.1);
 }
